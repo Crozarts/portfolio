@@ -293,12 +293,13 @@
 
   .text {
       color:white;
-      padding-top: 300px;
+      padding-top: 250px;
       text-align: center;
   }
 
   .comeBackBtn {
-      padding-top: 600px;
+      padding: 300px;
+      position: bottom;
       text-align: center;
   }
   .comeBack {
