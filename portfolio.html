@@ -1,88 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-<link rel="stylesheet" href="assets/style/style.css">
-<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <title>Portfolio</title>
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="index.html"><img src="assets/img/CrozLogo.png" style="padding-left: 20px; height: auto; width: 100px;"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown mr-auto" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html"><img src="assets/img/CrozLogo.png"
+                style="padding-left: 20px; height: auto; width: 100px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown mr-auto" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto" style="padding-right: 80px;">
-            <li class="nav-item dropdown">
-                <a class="nav-link fas fa-chevron-circle-down" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="index.html">Home</a>
-                <a class="dropdown-item" href="portfolio.html">Portfolio</a>
-                <a class="dropdown-item" href="aboutMe.html">About Me</a>
-                </div>
-            </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link fas fa-chevron-circle-down" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="index.html">Home</a>
+                        <a class="dropdown-item" href="portfolio.html">Portfolio</a>
+                        <a class="dropdown-item" href="aboutMe.html">About Me</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
 
+    <!-- Cards for portfolio elements -->
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
-                    <img src="assets/img/codeRefractor.png" id="imgPort"
-                        alt="Photo of sunset" style="top:10px">
+                    <img src="assets/img/codeRefractor.png" id="imgPort" alt="Photo of sunset" style="top:10px">
                     <h5 class="card-title mt-3 mb-3" id="cardTitlePort">01 Code Refractor HW</h5>
-                    <p class="card-text pb-5">Homework assigned by Rutgers Coding Bootcamp utilizing customers User Story, refractored this website to meet acessibilty and quality standards..</p>
+                    <p class="card-text pb-2">Homework assigned by Rutgers Coding Bootcamp utilizing customers User
+                        Story, refractored this website to meet acessibilty and quality standards..</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
                     <img src="assets/img/passwordGen.gif" id="imgPort" alt="Photo of sunset">
                     <h5 class="card-title  mt-3 mb-3" id="cardTitlePort">02 Password Generator</h5>
-                    <p class="card-text pb-5">I created a Password Generator utilizing javascript modals and the starter code provided by Rutgers curriculum.</p>
+                    <p class="card-text pb-2">I created a Password Generator utilizing javascript modals and the starter
+                        code provided by Rutgers curriculum.</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
                     <img src="assets/img/weatherDash.gif" id="imgPort" alt="Photo of sunset">
                     <h5 class="card-title  mt-3 mb-3" id="cardTitlePort">03 Weather Dashboard</h5>
-                    <p class="card-text pb-5">Created a weather dashboard to give you a 5 day weather forcast utilzing openWeather Api.</p>
+                    <p class="card-text pb-2">Created a weather dashboard to give you a 5 day weather forcast utilzing
+                        openWeather Api.</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
                     <img src="assets/img/dayPlanner.gif" id="imgPort" alt="Photo of sunset">
                     <h5 class="card-title  mt-3 mb-3" id="cardTitlePort">04 Day Planner</h5>
-                    <p class="card-text pb-5">created a day planner utilizing the rutgers started code, and current time in javascript. the application can save notes and confirm the time, giving the color to the block accordingly. </p>
+                    <p class="card-text pb-2">created a day planner utilizing the rutgers started code, and current time
+                        in javascript.<span id="dots">...</span><span id="more"> The application can save notes and
+                            confirm the time, given the color to the block accordingly. </span></p>
+                    <button onclick="readMorePlanner()" id="myBtn" style="background-color: black; color:white; ">Read
+                        more</button>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
                     <img src="assets/img/quizHW.gif" id="imgPort" alt="Photo of sunset">
                     <h5 class="card-title  mt-3 mb-3" id="cardTitlePort">05 Quiz Game</h5>
-                    <p class="card-text pb-5">I have created a skateboarding quiz with a function timer and a score renderer upon completion</p>
+                    <p class="card-text pb-2">I have created a skateboarding quiz utilizing with a timer and a score
+                        renderer upon completion</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="card card-block">
                     <img src="assets/img/readMeGen.gif" id="imgPort" alt="Photo of sunset">
                     <h5 class="card-title  mt-3 mb-3" id="cardTitlePort">06 ReadMe Generator</h5>
-                    <p class="card-text pb-5">For this assignment, we were instructed to create a ReadMe.md generator using Node.js.</p>
+                    <p class="card-text pb-2">For this assignment, we were instructed to create a ReadMe.md generator
+                        using Node.js.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card card-block">
+                    <img src="assets/img/TeamGen.gif" id="imgPort" alt="Photo of sunset">
+                    <h5 class="card-title  mt-3 mb-3" id="cardTitlePort">10 Team Profile Generator</h5>
+                    <p class="card-text pb-2">Our homework assignment was to build a software engineering team generator
+                        command line application. <span id="dots1">...</span><span id="more1"> The application had to prompt the user for information about the team manager and then information about the team members. The user can input any number of team members. This assignment had to also pass all unit tests. When the user has completed building the team, the application creates an HTML file that displays a nicely formatted team roster based on the information provided.</span>
+                    </p>
+                    <button onclick="readMoreTeamGen()" id="myBtn1" style="background-color: black; color:white; ">Read more</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card card-block">
+                    <img src="..." id="imgPort" alt="Photo of sunset">
+                    <h5 class="card-title  mt-3 mb-3" id="cardTitlePort">11 Note Taker</h5>
+                    <p class="card-text pb-5">Our homework assignment was to build a software engineering team generator
+                        command line application. <span id="dots2">...</span><span id="more2">to be continued...</span>
+                    </p>
+                    <button onclick="myFunction()" id="myBtn2" style="background-color: black; color:white; ">Read
+                        more</button>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        // function for READ MORE/READ LESS buttons
+        function readMorePlanner() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
 
-<script src="java.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+
+        function readMoreTeamGen() {
+            var dots = document.getElementById("dots1");
+            var moreText = document.getElementById("more1");
+            var btnText = document.getElementById("myBtn1");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+
+    </script>
+    <script src="java.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
